@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 const Main = () => {
   return (
     <Box
@@ -78,23 +78,32 @@ const Main = () => {
             <Typography sx={{ display: "flex", justifyContent: "center" }}>
               Summary
             </Typography>
-            <Box sx={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-              <Box sx={{display:'flex', justifyContent:'space-between'}}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Box> icon Reaction</Box>
                 <Box>80 / 100</Box>
               </Box>
-              <Box sx={{display:'flex', justifyContent:'space-between'}}>
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Box> icon Reaction</Box>
                 <Box>80 / 100</Box>
               </Box>
-              <Box sx={{display:'flex', justifyContent:'space-between'}}>
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Box> icon Reaction</Box>
                 <Box>80 / 100</Box>
               </Box>
-              <Box sx={{display:'flex', justifyContent:'space-between'}}>
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Box> icon Reaction</Box>
                 <Box>80 / 100</Box>
               </Box>
+            </Box>
+            <Box>
+              <Button sx={{backgroundColor:'hsl(234, 85%, 45%)', width:'100%', borderRadius:'20px'}}> Continue</Button>
             </Box>
           </Box>
         </Box>
