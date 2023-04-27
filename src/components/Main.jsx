@@ -103,7 +103,16 @@ const Main = () => {
               </Box>
             </Box>
             <Box>
-              <Button sx={{backgroundColor:'hsl(234, 85%, 45%)', width:'100%', borderRadius:'20px'}}> Continue</Button>
+              <Button
+                sx={{
+                  backgroundColor: "hsl(234, 85%, 45%)",
+                  width: "100%",
+                  borderRadius: "20px",
+                }}
+              >
+                {" "}
+                Continue
+              </Button>
             </Box>
           </Box>
         </Box>
