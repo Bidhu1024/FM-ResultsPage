@@ -1,4 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
+import {ElectricBoltOutlinedIcon} from '@mui/icons-material';
 const Main = () => {
   return (
     <Box
@@ -27,7 +28,7 @@ const Main = () => {
               flexDirection: "column",
               alignItems: "center",
               width: "100%",
-              padding: "8px",
+              padding: "8px 10px",
               justifyContent: "space-between",
             }}
           >
@@ -66,13 +67,13 @@ const Main = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ width: "15rem" }}>
+        <Box sx={{ width: "15rem", marginLeft: "-0.5rem",background:"hsl(0, 0%, 100%)", zIndex:'-1'  }}>
           <Box
             sx={{
               width: "100%",
               display: "flex",
               flexDirection: "column",
-              padding: "8px",
+              padding: " 8px 14px",
             }}
           >
             <Typography sx={{ display: "flex", justifyContent: "center" }}>
@@ -83,10 +84,21 @@ const Main = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
+                // alignItems:'center',
+                width: "100%",
+                height: "8rem",
               }}
             >
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <Box> icon Reaction</Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  border: "1px solid black",
+                  padding: "4px 6px",
+                  borderRadius: "8px",
+                }}
+              >
+                <Box> <ElectricBoltOutlinedIcon/> Reaction</Box>
                 <Box>80 / 100</Box>
               </Box>
               <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -102,7 +114,7 @@ const Main = () => {
                 <Box>80 / 100</Box>
               </Box>
             </Box>
-            <Box>
+            <Box sx={{mt:'2.5rem'}}>
               <Button
                 sx={{
                   backgroundColor: "hsl(234, 85%, 45%)",
@@ -110,8 +122,7 @@ const Main = () => {
                   borderRadius: "20px",
                 }}
               >
-                {" "}
-                Continue
+                   Continue
               </Button>
             </Box>
           </Box>
