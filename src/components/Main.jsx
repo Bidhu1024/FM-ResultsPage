@@ -1,5 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
-import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
+import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import TextsmsRoundedIcon from '@mui/icons-material/TextsmsRounded';
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 const Main = () => {
   return (
     <Box
@@ -11,13 +14,14 @@ const Main = () => {
         alignItems: "center",
       }}
     >
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", boxShadow:2, borderRadius:'12px' }}>
         <Box
           sx={{
             display: "flex",
             height: "16rem",
             width: "15rem",
             justifyContent: "center",
+            borderRadius:'12px',
             background:
               "linear-gradient(to bottom, rgba(17, 37, 212,0.7) 0%, rgba(17, 37, 212,1) 100%)",
           }}
@@ -67,7 +71,14 @@ const Main = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ width: "15rem", marginLeft: "-0.5rem",background:"hsl(0, 0%, 100%)", zIndex:'-1'  }}>
+        <Box
+          sx={{
+            width: "15rem",
+            marginLeft: "-0.3rem",
+            background: "hsl(0, 0%, 100%)",
+            zIndex: "-1",
+          }}
+        >
           <Box
             sx={{
               width: "100%",
@@ -76,7 +87,7 @@ const Main = () => {
               padding: " 8px 14px",
             }}
           >
-            <Typography sx={{ display: "flex", justifyContent: "center" }}>
+            <Typography sx={{ display: "flex", justifyContent: "flex-start" }}>
               Summary
             </Typography>
             <Box
@@ -87,6 +98,7 @@ const Main = () => {
                 // alignItems:'center',
                 width: "100%",
                 height: "8rem",
+                gap: "10px",
               }}
             >
               <Box
@@ -96,25 +108,65 @@ const Main = () => {
                   border: "1px solid black",
                   padding: "4px 6px",
                   borderRadius: "8px",
+                  alignItems: "center",
                 }}
               >
-                <Box> <ElectricBoltIcon/> Reaction</Box>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
+                  {" "}
+                  <ElectricBoltIcon /> Reaction
+                </Box>
                 <Box>80 / 100</Box>
               </Box>
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <Box> icon Reaction</Box>
-                <Box>80 / 100</Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  border: "1px solid black",
+                  padding: "4px 6px",
+                  borderRadius: "8px",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
+                  {" "}
+                  <AcUnitIcon /> Memory
+                </Box>
+                <Box>92 / 100</Box>
               </Box>
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <Box> icon Reaction</Box>
-                <Box>80 / 100</Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  border: "1px solid black",
+                  padding: "4px 6px",
+                  borderRadius: "8px",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
+                  {" "}
+                  <TextsmsRoundedIcon /> Verbal
+                </Box>
+                <Box>61 / 100</Box>
               </Box>
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <Box> icon Reaction</Box>
-                <Box>80 / 100</Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  border: "1px solid black",
+                  padding: "4px 6px",
+                  borderRadius: "8px",
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
+                  {" "}
+                  <RemoveRedEyeOutlinedIcon /> Visual
+                </Box>
+                <Box>72 / 100</Box>
               </Box>
             </Box>
-            <Box sx={{mt:'2.5rem'}}>
+            <Box sx={{ mt: "2.5rem" }}>
               <Button
                 sx={{
                   backgroundColor: "hsl(234, 85%, 45%)",
@@ -122,7 +174,7 @@ const Main = () => {
                   borderRadius: "20px",
                 }}
               >
-                   Continue
+                Continue
               </Button>
             </Box>
           </Box>
