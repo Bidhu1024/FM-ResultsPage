@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
-import {ElectricBoltOutlinedIcon} from '@mui/icons-material';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 const Main = () => {
   return (
     <Box
@@ -98,7 +98,7 @@ const Main = () => {
                   borderRadius: "8px",
                 }}
               >
-                <Box> <ElectricBoltOutlinedIcon/> Reaction</Box>
+                <Box> <ElectricBoltIcon/> Reaction</Box>
                 <Box>80 / 100</Box>
               </Box>
               <Box sx={{ display: "flex", justifyContent: "space-between" }}>
