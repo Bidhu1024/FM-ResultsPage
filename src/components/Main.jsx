@@ -1,8 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
-import AcUnitIcon from '@mui/icons-material/AcUnit';
-import TextsmsRoundedIcon from '@mui/icons-material/TextsmsRounded';
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+import TextsmsRoundedIcon from "@mui/icons-material/TextsmsRounded";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 const Main = () => {
   return (
     <Box
@@ -14,14 +14,14 @@ const Main = () => {
         alignItems: "center",
       }}
     >
-      <Box sx={{ display: "flex", boxShadow:2, borderRadius:'12px' }}>
+      <Box sx={{ display: "flex", boxShadow: 2, borderRadius: "12px" }}>
         <Box
           sx={{
             display: "flex",
             height: "16rem",
             width: "15rem",
             justifyContent: "center",
-            borderRadius:'12px',
+            borderRadius: "12px",
             background:
               "linear-gradient(to bottom, rgba(17, 37, 212,0.7) 0%, rgba(17, 37, 212,1) 100%)",
           }}
@@ -36,7 +36,11 @@ const Main = () => {
               justifyContent: "space-between",
             }}
           >
-            <Typography sx={{ display: "flex", justifyContent: "center" }}>
+            <Typography
+              fontWeight="bold"
+              color="rgb(232, 228, 227)"
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
               Your Result
             </Typography>
 
@@ -45,13 +49,23 @@ const Main = () => {
                 borderRadius: "50%",
                 background: "rgba(17, 37, 212,1)",
                 border: "1px solid black",
-                padding: "20px",
+                boxShadow: "1",
+                padding: "20px 35px",
               }}
             >
-              <Typography sx={{ display: "flex", justifyContent: "center" }}>
+              <Typography
+                color="white"
+                fontSize={"2rem"}
+                fontWeight={"600"}
+                sx={{ display: "flex", justifyContent: "center" }}
+              >
                 76
               </Typography>
-              <Typography sx={{ display: "flex", justifyContent: "center" }}>
+              <Typography
+                fontSize={".8rem"}
+                color="rgb(232, 228, 227)"
+                sx={{ display: "flex", justifyContent: "center" }}
+              >
                 of 100
               </Typography>
             </Box>
@@ -64,8 +78,10 @@ const Main = () => {
                 width: "100%",
               }}
             >
-              <Typography>Great</Typography>
-              <Typography textAlign={"center"}>
+              <Typography fontWeight={"bold"} color="white" fontSize={"1.2rem"}>
+                Great
+              </Typography>
+              <Typography color="#c0b4cc" textAlign={"center"}>
                 You scored more than 65% of the people who have taken the test
               </Typography>
             </Box>
@@ -87,7 +103,11 @@ const Main = () => {
               padding: " 8px 14px",
             }}
           >
-            <Typography sx={{ display: "flex", justifyContent: "flex-start" }}>
+            <Typography
+              fontSize={"1rem"}
+              fontWeight={"600"}
+              sx={{ display: "flex", justifyContent: "flex-start" }}
+            >
               Summary
             </Typography>
             <Box
@@ -95,7 +115,7 @@ const Main = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                // alignItems:'center',
+
                 width: "100%",
                 height: "8rem",
                 gap: "10px",
