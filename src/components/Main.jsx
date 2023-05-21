@@ -1,17 +1,35 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, } from "@mui/material";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import TextsmsRoundedIcon from "@mui/icons-material/TextsmsRounded";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+ import useMediaQuery from '@mui/material/useMediaQuery';
 const Main = () => {
+  const Laptop = useMediaQuery('(min-width: 768px)');
   return (
+    
+
+    
     <Box
       sx={{
-        width: "100%",
+        width: {
+          lg:"100%",
+          md:'100%',
+          sm:'100%',
+        },
         height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        ...(Laptop && {
+          display:'flex',
+          width:'100%',
+          flexDirection:'column',
+          alignItems:'center'
+      
+    }),
+      
+
       }}
     >
       <Box sx={{ display: "flex", boxShadow: 2, borderRadius: "12px" }}>
@@ -38,7 +56,7 @@ const Main = () => {
           >
             <Typography
               fontWeight="bold"
-              color="rgb(232, 228, 227)"
+              color="hsl(241, 100%, 89%)"
               sx={{ display: "flex", justifyContent: "center" }}
             >
               Your Result
@@ -48,7 +66,7 @@ const Main = () => {
               sx={{
                 borderRadius: "50%",
                 background: "rgba(17, 37, 212,1)",
-                border: "1px solid black",
+                border: "1px solid blue",
                 boxShadow: "1",
                 padding: "20px 35px",
               }}
@@ -63,7 +81,7 @@ const Main = () => {
               </Typography>
               <Typography
                 fontSize={".8rem"}
-                color="rgb(232, 228, 227)"
+                color="hsl(241, 100%, 89%)"
                 sx={{ display: "flex", justifyContent: "center" }}
               >
                 of 100
@@ -106,6 +124,7 @@ const Main = () => {
             <Typography
               fontSize={"1rem"}
               fontWeight={"600"}
+              color="hsl(224, 30%, 27%)"
               sx={{ display: "flex", justifyContent: "flex-start" }}
             >
               Summary
@@ -115,7 +134,7 @@ const Main = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-
+                mt: ".6rem",
                 width: "100%",
                 height: "8rem",
                 gap: "10px",
@@ -125,73 +144,160 @@ const Main = () => {
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  border: "1px solid black",
-                  padding: "4px 6px",
+                  border: "1px solid hsl(0, 100%, 92%)",
+                  padding: "4px 4px",
                   borderRadius: "8px",
                   alignItems: "center",
+                  background: "hsl(0, 100%, 92%)",
                 }}
               >
                 <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
                   {" "}
-                  <ElectricBoltIcon /> Reaction
+                  <ElectricBoltIcon
+                    sx={{ fontSize: ".85rem", color: "hsl(0, 100%, 67%)" }}
+                  />{" "}
+                  <Typography
+                    color="hsl(0, 100%, 67%)"
+                    fontSize={".85rem"}
+                    fontWeight={"600"}
+                  >
+                    Reaction
+                  </Typography>
                 </Box>
-                <Box>80 / 100</Box>
+                <Box sx={{ display: "flex" }}>
+                  {" "}
+                  <Typography
+                    fontSize={"1rem"}
+                    fontWeight={"600"}
+                    color="hsl(224, 30%, 27%)"
+                  >
+                    80 /
+                  </Typography>{" "}
+                  <Typography>100</Typography>
+                </Box>
               </Box>
               <Box
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  border: "1px solid black",
-                  padding: "4px 6px",
+                  border: "1px solid hsl(39, 100%, 85%)",
+                  padding: "4px 4px",
                   borderRadius: "8px",
                   alignItems: "center",
+                  background: "hsl(39, 100%, 85%)",
                 }}
               >
                 <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
                   {" "}
-                  <AcUnitIcon /> Memory
+                  <AcUnitIcon
+                    sx={{ fontSize: ".85rem", color: "hsl(39, 100%, 56%)" }}
+                  />{" "}
+                  <Typography
+                    color="hsl(39, 100%, 56%)"
+                    fontSize={".85rem"}
+                    fontWeight={"600"}
+                  >
+                    Memory
+                  </Typography>
                 </Box>
-                <Box>92 / 100</Box>
+                <Box sx={{ display: "flex" }}>
+                  {" "}
+                  <Typography
+                    fontSize={"1rem"}
+                    fontWeight={"600"}
+                    color="hsl(224, 30%, 27%)"
+                  >
+                    92 /
+                  </Typography>{" "}
+                  <Typography>100</Typography>
+                </Box>
               </Box>
               <Box
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  border: "1px solid black",
-                  padding: "4px 6px",
+                  border: "1px solid hsl(241, 100%, 95%)",
+                  padding: "4px 4px",
                   borderRadius: "8px",
                   alignItems: "center",
+                  background: "hsl(241, 100%, 95%)",
                 }}
               >
                 <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
                   {" "}
-                  <TextsmsRoundedIcon /> Verbal
+                  <TextsmsRoundedIcon
+                    sx={{ fontSize: ".85rem", color: "hsl(241, 100%, 65%)" }}
+                  />{" "}
+                  <Typography
+                    color="hsl(241, 100%, 65%)"
+                    fontSize={".85rem"}
+                    fontWeight={"600"}
+                  >
+                    Verbal
+                  </Typography>
                 </Box>
-                <Box>61 / 100</Box>
+                <Box sx={{ display: "flex" }}>
+                  {" "}
+                  <Typography
+                    fontSize={"1rem"}
+                    fontWeight={"600"}
+                    color="hsl(224, 30%, 27%)"
+                  >
+                    61 /
+                  </Typography>{" "}
+                  <Typography>100</Typography>
+                </Box>
               </Box>
               <Box
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  border: "1px solid black",
-                  padding: "4px 6px",
+                  border: "1px solid hsl(224, 30%, 92%)",
+                  padding: "4px 4px",
                   borderRadius: "8px",
                   alignItems: "center",
+                  background:'hsl(224, 30%, 92%)'
                 }}
               >
                 <Box sx={{ display: "flex", alignItems: "center", gap: "2px" }}>
                   {" "}
-                  <RemoveRedEyeOutlinedIcon /> Visual
+                  <RemoveRedEyeOutlinedIcon  sx={{ fontSize: ".85rem", color: "hsl(224, 30%, 27%)" }} /> <Typography
+                    color="hsl(224, 30%, 27%)"
+                    fontSize={".85rem"}
+                    fontWeight={"600"}
+                  >
+                    Visual
+                  </Typography>
                 </Box>
-                <Box>72 / 100</Box>
+                <Box sx={{ display: "flex" }}>
+                  {" "}
+                  <Typography
+                    fontSize={"1rem"}
+                    fontWeight={"600"}
+                    color="hsl(224, 30%, 27%)"
+                  >
+                    72 /
+                  </Typography>{" "}
+                  <Typography>100</Typography>
+                </Box>
               </Box>
             </Box>
             <Box sx={{ mt: "2.5rem" }}>
               <Button
                 sx={{
-                  backgroundColor: "hsl(234, 85%, 45%)",
+                  backgroundColor: "hsl(224, 30%, 22%)",
                   width: "100%",
                   borderRadius: "20px",
+                  textTransform: "lowercase",
+                  color: "white",
+                  fontSize: ".95rem",
+
+                  "hover":{
+                    backgroundColor: 'lightblue',
+                    color:'white',
+                    cursor:'pointer',
+
+                  }
                 }}
               >
                 Continue
